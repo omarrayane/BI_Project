@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization Gallery</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --card-bg: #ffffff;
+            --primary-color: #0d6efd;
+            --border-color: #dee2e6;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-weight: 400;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.2s;
+            border: 1px solid var(--border-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background: #fff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .link-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .link-item {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+
+        .link-item:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .icon {
+            margin-right: 10px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Visualization Gallery</h1>
+            <p>Overview of generated business intelligence charts and reports.</p>
+        </header>
+
+        <section>
+            <h2>Static Figures</h2>
+            <div class="gallery-grid">
+                <div class="card">
+                    <a href="3d_orders_by_month_country.png" target="_blank">
+                        <img src="3d_orders_by_month_country.png" alt="3D Orders Trend">
+                    </a>
+                    <div class="card-content">
+                        <h3 class="card-title">3D Orders Trend</h3>
+                        <p>Orders by Month and Country</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="monthly_orders_trend.png" target="_blank">
+                        <img src="monthly_orders_trend.png" alt="Monthly Trend">
+                    </a>
+                    <div class="card-content">
+                        <h3 class="card-title">Monthly Orders Trend</h3>
+                        <p>Total orders over time</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="orders_by_country.png" target="_blank">
+                        <img src="orders_by_country.png" alt="Orders by Country">
+                    </a>
+                    <div class="card-content">
+                        <h3 class="card-title">Orders by Country</h3>
+                        <p>Geographic distribution of orders</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="orders_by_employee.png" target="_blank">
+                        <img src="orders_by_employee.png" alt="Orders by Employee">
+                    </a>
+                    <div class="card-content">
+                        <h3 class="card-title">Orders by Employee</h3>
+                        <p>Performance metrics per employee</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Interactive Reports</h2>
+            <div class="link-list">
+                <a href="dashboard_interactive.html" class="link-item" target="_blank">
+                    <span class="icon">📊</span> Main Interactive Dashboard
+                </a>
+                <a href="dashboard_notebook.html" class="link-item" target="_blank">
+                    <span class="icon">📓</span> Dashboard Notebook Report
+                </a>
+                <a href="3d_orders_interactive.html" class="link-item" target="_blank">
+                    <span class="icon">📈</span> 3D Orders Interactive
+                </a>
+                <a href="3d_orders_notebook.html" class="link-item" target="_blank">
+                    <span class="icon">📓</span> 3D Orders Notebook
+                </a>
+                <a href="delivery_by_country_interactive.html" class="link-item" target="_blank">
+                    <span class="icon">🌍</span> Delivery by Country Interactive
+                </a>
+                <a href="delivery_by_country_notebook.html" class="link-item" target="_blank">
+                    <span class="icon">📓</span> Delivery by Country Notebook
+                </a>
+                <a href="delivery_stats_interactive.html" class="link-item" target="_blank">
+                    <span class="icon">🚚</span> Delivery Stats Interactive
+                </a>
+                <a href="delivery_stats_notebook.html" class="link-item" target="_blank">
+                    <span class="icon">📓</span> Delivery Stats Notebook
+                </a>
+                <a href="monthly_trend_interactive.html" class="link-item" target="_blank">
+                    <span class="icon">📅</span> Monthly Trend Interactive
+                </a>
+                <a href="monthly_trend_notebook.html" class="link-item" target="_blank">
+                    <span class="icon">📓</span> Monthly Trend Notebook
+                </a>
+                <a href="orders_by_country_interactive.html" class="link-item" target="_blank">
+                    <span class="icon">🗺️</span> Orders by Country Interactive
+                </a>
+                <a href="orders_by_country_notebook.html" class="link-item" target="_blank">
+                    <span class="icon">📓</span> Orders by Country Notebook
+                </a>
+                <a href="orders_by_employee_interactive.html" class="link-item" target="_blank">
+                    <span class="icon">👥</span> Orders by Employee Interactive
+                </a>
+                <a href="orders_by_employee_notebook.html" class="link-item" target="_blank">
+                    <span class="icon">📓</span> Orders by Employee Notebook
+                </a>
+                <a href="delivery_by_country.html" class="link-item" target="_blank">
+                    <span class="icon">📄</span> Delivery by Country (Static)
+                </a>
+                <a href="delivery_by_employee.html" class="link-item" target="_blank">
+                    <span class="icon">📄</span> Delivery by Employee (Static)
+                </a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
